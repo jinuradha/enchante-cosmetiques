@@ -32,7 +32,7 @@ const Body = () => {
 
   const fetchBestSellerItems = async () => {
     const itemData = await fetch(
-      "https://www.tirabeauty.com/ext/algolia/application/api/v1.0/collections/hp-bestsellers/items?filters=false&page_size=10"
+      "https://www.tirabeauty.com/ext/plpoffers/application/api/v1.0/collections/viral-hits-hp-sept-po/items?filters=false&page_size=10"
     );
     const json = await itemData.json();
     setbestsellerItems(json.items);
@@ -44,7 +44,6 @@ const Body = () => {
     );
     const json = await data.json();
     setWishlistOffer(json.data[7].items);
-    console.log(json.data);
     setImages(json.data[6].items);
   };
 
